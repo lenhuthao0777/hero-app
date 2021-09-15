@@ -1,9 +1,9 @@
-import { Suspense,lazy } from "react";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import HomeLayout from "./layouts/HomeLayout";
-const Dashboard = lazy(()=> import("./pages/Dashboard"));
-const Heroes = lazy(()=> import("./pages/Heroes"));
-const Detail = lazy(()=> import("./pages/Detail"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const Heroes = lazy(() => import("./pages/Heroes"));
+const Detail = lazy(() => import("./pages/Detail"));
 
 function App() {
     return (
@@ -16,11 +16,11 @@ function App() {
                                 <Route path="/" exact>
                                     <Dashboard />
                                 </Route>
-                                <Route path="/heroes" exact>
-                                  <Heroes/>
+                                <Route path="/heroes">
+                                    <Heroes />
                                 </Route>
-                                <Route path="/detail" exact>
-                                    <Detail/>
+                                <Route path="/detail">
+                                    <Detail />
                                 </Route>
                             </Switch>
                         </HomeLayout>
