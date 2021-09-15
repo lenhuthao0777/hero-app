@@ -1,0 +1,46 @@
+.heroes {
+    h2 {
+        margin: 20px 0;
+    }
+    ul {
+        li {
+            list-style: none;
+            height: 44px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            background-color: #eeeeee;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+            span {
+                width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #5f7d8c;
+                height: 100%;
+                margin-right: 16px;
+            }
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    .select {
+        margin-top: 50px;
+        a {
+            padding: 10px 15px;
+            background-color: #eeeeee;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
