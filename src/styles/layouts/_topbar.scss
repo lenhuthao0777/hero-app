@@ -4,6 +4,7 @@
         margin-bottom: 20px;
     }
     .btn {
+        text-decoration: none;
         color: #78919d;
         padding: 10px 15px;
         border: none;
@@ -13,8 +14,13 @@
         font-weight: 600;
         background-color: #eeeeee;
         cursor: pointer;
+        transition: all 0.3s;
         &.btn--active {
             color: #02978e;
+        }
+        &:hover {
+            color: #02978e;
+            background-color: #d2dadc;
         }
     }
 }
