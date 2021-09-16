@@ -1,4 +1,4 @@
-import { UPDATE_PERSON,SELECTED_PERSON } from "../constants/ActionTypes";
+import { UPDATE_PERSON, SELECTED_PERSON } from "../constants/ActionTypes";
 const initialState = {
     data: [
         { id: 11, name: "Dr Nice" },
@@ -20,7 +20,11 @@ function PersonReducer(state = initialState, action) {
             state.selectedData = { ...action.data };
             return { ...state };
         case UPDATE_PERSON:
-            console.log(action.payload.data.id);
+            let newData = action.payload.data;
+            let index = state.data.findIndex((item) => item.id === newData.id);
+            if (index >= 0) {
+                state.data[index] = newData;
+            }
             return { ...state };
         default:
             return state;
