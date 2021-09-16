@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import DashboardReducer from "./DashboardReducer";
+import PersonReducer from "./PersonReducer";
 export const rootReducer = combineReducers({
-    DashboardReducer,
+    PersonReducer,
 });

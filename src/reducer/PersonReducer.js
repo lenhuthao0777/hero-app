@@ -1,3 +1,4 @@
+import { UPDATE_PERSON,SELECTED_PERSON } from "../constants/ActionTypes";
 const initialState = {
     data: [
         { id: 11, name: "Dr Nice" },
@@ -11,11 +12,18 @@ const initialState = {
         { id: 19, name: "Magma" },
         { id: 20, name: "Tornado" },
     ],
+    selectedData: {},
 };
-function DashboardReducer(state = initialState, action) {
+function PersonReducer(state = initialState, action) {
     switch (action.type) {
+        case SELECTED_PERSON:
+            state.selectedData = { ...action.data };
+            return { ...state };
+        case UPDATE_PERSON:
+            console.log(action.payload.data.id);
+            return { ...state };
         default:
             return state;
     }
 }
-export default DashboardReducer;
+export default PersonReducer;
