@@ -1,0 +1,2 @@
+export const UPDATE_PERSON = "UPDATE_PERSON";
+export const SELECTED_PERSON = "SELECTED_PERSON";

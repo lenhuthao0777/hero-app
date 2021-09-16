@@ -19,7 +19,7 @@ function App() {
                                 <Route path="/heroes">
                                     <Heroes />
                                 </Route>
-                                <Route path="/detail">
+                                <Route path="/detail/:id">
                                     <Detail />
                                 </Route>
                             </Switch>
