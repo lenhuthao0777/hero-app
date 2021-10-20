@@ -7,7 +7,7 @@ const TopBar = () => {
             <div className="container">
                 <h1>Tour of Heroes</h1>
                 <Link to="/" className={`btn ${location.pathname === "/" ? "btn--active" : ""}`}>
-                    Dashboard
+                    Dashboardsdsdsdsa
                 </Link>
                 <Link to="/heroes" className={`btn ${location.pathname === "/heroes" ? "btn--active" : ""}`}>
                     Heroes
